@@ -1,0 +1,3531 @@
+{
+  "data": {
+    "edges": [
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "HuggingFaceInferenceAPIEmbeddings",
+            "id": "HuggingFaceInferenceAPIEmbeddings-DzSQ1",
+            "name": "embeddings",
+            "output_types": [
+              "Embeddings"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "embedding_model",
+            "id": "TextEmbedderComponent-otJ18",
+            "inputTypes": [
+              "Embeddings"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__HuggingFaceInferenceAPIEmbeddings-DzSQ1{œdataTypeœ:œHuggingFaceInferenceAPIEmbeddingsœ,œidœ:œHuggingFaceInferenceAPIEmbeddings-DzSQ1œ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}-TextEmbedderComponent-otJ18{œfieldNameœ:œembedding_modelœ,œidœ:œTextEmbedderComponent-otJ18œ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "HuggingFaceInferenceAPIEmbeddings-DzSQ1",
+        "sourceHandle": "{œdataTypeœ:œHuggingFaceInferenceAPIEmbeddingsœ,œidœ:œHuggingFaceInferenceAPIEmbeddings-DzSQ1œ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}",
+        "target": "TextEmbedderComponent-otJ18",
+        "targetHandle": "{œfieldNameœ:œembedding_modelœ,œidœ:œTextEmbedderComponent-otJ18œ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "TextEmbedderComponent",
+            "id": "TextEmbedderComponent-otJ18",
+            "name": "embeddings",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "embedding_vectors",
+            "id": "EmbeddingSimilarityComponent-4vbrZ",
+            "inputTypes": [
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__TextEmbedderComponent-otJ18{œdataTypeœ:œTextEmbedderComponentœ,œidœ:œTextEmbedderComponent-otJ18œ,œnameœ:œembeddingsœ,œoutput_typesœ:[œDataœ]}-EmbeddingSimilarityComponent-4vbrZ{œfieldNameœ:œembedding_vectorsœ,œidœ:œEmbeddingSimilarityComponent-4vbrZœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "TextEmbedderComponent-otJ18",
+        "sourceHandle": "{œdataTypeœ:œTextEmbedderComponentœ,œidœ:œTextEmbedderComponent-otJ18œ,œnameœ:œembeddingsœ,œoutput_typesœ:[œDataœ]}",
+        "target": "EmbeddingSimilarityComponent-4vbrZ",
+        "targetHandle": "{œfieldNameœ:œembedding_vectorsœ,œidœ:œEmbeddingSimilarityComponent-4vbrZœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "EmbeddingSimilarityComponent",
+            "id": "EmbeddingSimilarityComponent-4vbrZ",
+            "name": "similarity_data",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_data",
+            "id": "parser-00zvY",
+            "inputTypes": [
+              "DataFrame",
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__EmbeddingSimilarityComponent-4vbrZ{œdataTypeœ:œEmbeddingSimilarityComponentœ,œidœ:œEmbeddingSimilarityComponent-4vbrZœ,œnameœ:œsimilarity_dataœ,œoutput_typesœ:[œDataœ]}-parser-00zvY{œfieldNameœ:œinput_dataœ,œidœ:œparser-00zvYœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "EmbeddingSimilarityComponent-4vbrZ",
+        "sourceHandle": "{œdataTypeœ:œEmbeddingSimilarityComponentœ,œidœ:œEmbeddingSimilarityComponent-4vbrZœ,œnameœ:œsimilarity_dataœ,œoutput_typesœ:[œDataœ]}",
+        "target": "parser-00zvY",
+        "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œparser-00zvYœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "pgvector",
+            "id": "pgvector-zEiHu",
+            "name": "search_results",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "embedding_vectors",
+            "id": "EmbeddingSimilarityComponent-4vbrZ",
+            "inputTypes": [
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__pgvector-zEiHu{œdataTypeœ:œpgvectorœ,œidœ:œpgvector-zEiHuœ,œnameœ:œsearch_resultsœ,œoutput_typesœ:[œDataœ]}-EmbeddingSimilarityComponent-4vbrZ{œfieldNameœ:œembedding_vectorsœ,œidœ:œEmbeddingSimilarityComponent-4vbrZœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "pgvector-zEiHu",
+        "sourceHandle": "{œdataTypeœ:œpgvectorœ,œidœ:œpgvector-zEiHuœ,œnameœ:œsearch_resultsœ,œoutput_typesœ:[œDataœ]}",
+        "target": "EmbeddingSimilarityComponent-4vbrZ",
+        "targetHandle": "{œfieldNameœ:œembedding_vectorsœ,œidœ:œEmbeddingSimilarityComponent-4vbrZœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "HuggingFaceInferenceAPIEmbeddings",
+            "id": "HuggingFaceInferenceAPIEmbeddings-DzSQ1",
+            "name": "embeddings",
+            "output_types": [
+              "Embeddings"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "embedding",
+            "id": "pgvector-zEiHu",
+            "inputTypes": [
+              "Embeddings"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__HuggingFaceInferenceAPIEmbeddings-DzSQ1{œdataTypeœ:œHuggingFaceInferenceAPIEmbeddingsœ,œidœ:œHuggingFaceInferenceAPIEmbeddings-DzSQ1œ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}-pgvector-zEiHu{œfieldNameœ:œembeddingœ,œidœ:œpgvector-zEiHuœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "HuggingFaceInferenceAPIEmbeddings-DzSQ1",
+        "sourceHandle": "{œdataTypeœ:œHuggingFaceInferenceAPIEmbeddingsœ,œidœ:œHuggingFaceInferenceAPIEmbeddings-DzSQ1œ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}",
+        "target": "pgvector-zEiHu",
+        "targetHandle": "{œfieldNameœ:œembeddingœ,œidœ:œpgvector-zEiHuœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Prompt",
+            "id": "Prompt-rZtFH",
+            "name": "prompt",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "HuggingFaceModel-OKxj9",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__Prompt-rZtFH{œdataTypeœ:œPromptœ,œidœ:œPrompt-rZtFHœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-HuggingFaceModel-OKxj9{œfieldNameœ:œinput_valueœ,œidœ:œHuggingFaceModel-OKxj9œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "Prompt-rZtFH",
+        "sourceHandle": "{œdataTypeœ:œPromptœ,œidœ:œPrompt-rZtFHœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "HuggingFaceModel-OKxj9",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œHuggingFaceModel-OKxj9œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Prompt Template",
+            "id": "Prompt Template-AgWtC",
+            "name": "prompt",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "search_query",
+            "id": "pgvector-zEiHu",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "query"
+          }
+        },
+        "id": "xy-edge__Prompt Template-AgWtC{œdataTypeœ:œPrompt Templateœ,œidœ:œPrompt Template-AgWtCœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-pgvector-zEiHu{œfieldNameœ:œsearch_queryœ,œidœ:œpgvector-zEiHuœ,œinputTypesœ:[œMessageœ],œtypeœ:œqueryœ}",
+        "selected": false,
+        "source": "Prompt Template-AgWtC",
+        "sourceHandle": "{œdataTypeœ:œPrompt Templateœ,œidœ:œPrompt Template-AgWtCœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "pgvector-zEiHu",
+        "targetHandle": "{œfieldNameœ:œsearch_queryœ,œidœ:œpgvector-zEiHuœ,œinputTypesœ:[œMessageœ],œtypeœ:œqueryœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "pgvector",
+            "id": "pgvector-rUzS6",
+            "name": "search_results",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "embedding_vectors",
+            "id": "EmbeddingSimilarityComponent-P30DQ",
+            "inputTypes": [
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__pgvector-rUzS6{œdataTypeœ:œpgvectorœ,œidœ:œpgvector-rUzS6œ,œnameœ:œsearch_resultsœ,œoutput_typesœ:[œDataœ]}-EmbeddingSimilarityComponent-P30DQ{œfieldNameœ:œembedding_vectorsœ,œidœ:œEmbeddingSimilarityComponent-P30DQœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "pgvector-rUzS6",
+        "sourceHandle": "{œdataTypeœ:œpgvectorœ,œidœ:œpgvector-rUzS6œ,œnameœ:œsearch_resultsœ,œoutput_typesœ:[œDataœ]}",
+        "target": "EmbeddingSimilarityComponent-P30DQ",
+        "targetHandle": "{œfieldNameœ:œembedding_vectorsœ,œidœ:œEmbeddingSimilarityComponent-P30DQœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "HuggingFaceInferenceAPIEmbeddings",
+            "id": "HuggingFaceInferenceAPIEmbeddings-DzSQ1",
+            "name": "embeddings",
+            "output_types": [
+              "Embeddings"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "embedding",
+            "id": "pgvector-rUzS6",
+            "inputTypes": [
+              "Embeddings"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__HuggingFaceInferenceAPIEmbeddings-DzSQ1{œdataTypeœ:œHuggingFaceInferenceAPIEmbeddingsœ,œidœ:œHuggingFaceInferenceAPIEmbeddings-DzSQ1œ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}-pgvector-rUzS6{œfieldNameœ:œembeddingœ,œidœ:œpgvector-rUzS6œ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "HuggingFaceInferenceAPIEmbeddings-DzSQ1",
+        "sourceHandle": "{œdataTypeœ:œHuggingFaceInferenceAPIEmbeddingsœ,œidœ:œHuggingFaceInferenceAPIEmbeddings-DzSQ1œ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}",
+        "target": "pgvector-rUzS6",
+        "targetHandle": "{œfieldNameœ:œembeddingœ,œidœ:œpgvector-rUzS6œ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "TextEmbedderComponent",
+            "id": "TextEmbedderComponent-otJ18",
+            "name": "embeddings",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "embedding_vectors",
+            "id": "EmbeddingSimilarityComponent-P30DQ",
+            "inputTypes": [
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__TextEmbedderComponent-otJ18{œdataTypeœ:œTextEmbedderComponentœ,œidœ:œTextEmbedderComponent-otJ18œ,œnameœ:œembeddingsœ,œoutput_typesœ:[œDataœ]}-EmbeddingSimilarityComponent-P30DQ{œfieldNameœ:œembedding_vectorsœ,œidœ:œEmbeddingSimilarityComponent-P30DQœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "TextEmbedderComponent-otJ18",
+        "sourceHandle": "{œdataTypeœ:œTextEmbedderComponentœ,œidœ:œTextEmbedderComponent-otJ18œ,œnameœ:œembeddingsœ,œoutput_typesœ:[œDataœ]}",
+        "target": "EmbeddingSimilarityComponent-P30DQ",
+        "targetHandle": "{œfieldNameœ:œembedding_vectorsœ,œidœ:œEmbeddingSimilarityComponent-P30DQœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Prompt Template",
+            "id": "Prompt Template-7rvJ7",
+            "name": "prompt",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "search_query",
+            "id": "pgvector-rUzS6",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "query"
+          }
+        },
+        "id": "xy-edge__Prompt Template-7rvJ7{œdataTypeœ:œPrompt Templateœ,œidœ:œPrompt Template-7rvJ7œ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-pgvector-rUzS6{œfieldNameœ:œsearch_queryœ,œidœ:œpgvector-rUzS6œ,œinputTypesœ:[œMessageœ],œtypeœ:œqueryœ}",
+        "selected": false,
+        "source": "Prompt Template-7rvJ7",
+        "sourceHandle": "{œdataTypeœ:œPrompt Templateœ,œidœ:œPrompt Template-7rvJ7œ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "pgvector-rUzS6",
+        "targetHandle": "{œfieldNameœ:œsearch_queryœ,œidœ:œpgvector-rUzS6œ,œinputTypesœ:[œMessageœ],œtypeœ:œqueryœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "EmbeddingSimilarityComponent",
+            "id": "EmbeddingSimilarityComponent-P30DQ",
+            "name": "similarity_data",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_data",
+            "id": "parser-MeApo",
+            "inputTypes": [
+              "DataFrame",
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__EmbeddingSimilarityComponent-P30DQ{œdataTypeœ:œEmbeddingSimilarityComponentœ,œidœ:œEmbeddingSimilarityComponent-P30DQœ,œnameœ:œsimilarity_dataœ,œoutput_typesœ:[œDataœ]}-parser-MeApo{œfieldNameœ:œinput_dataœ,œidœ:œparser-MeApoœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "EmbeddingSimilarityComponent-P30DQ",
+        "sourceHandle": "{œdataTypeœ:œEmbeddingSimilarityComponentœ,œidœ:œEmbeddingSimilarityComponent-P30DQœ,œnameœ:œsimilarity_dataœ,œoutput_typesœ:[œDataœ]}",
+        "target": "parser-MeApo",
+        "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œparser-MeApoœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "parser",
+            "id": "parser-00zvY",
+            "name": "parsed_text",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "context",
+            "id": "Prompt-rZtFH",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__parser-00zvY{œdataTypeœ:œparserœ,œidœ:œparser-00zvYœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-Prompt-rZtFH{œfieldNameœ:œcontextœ,œidœ:œPrompt-rZtFHœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "parser-00zvY",
+        "sourceHandle": "{œdataTypeœ:œparserœ,œidœ:œparser-00zvYœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Prompt-rZtFH",
+        "targetHandle": "{œfieldNameœ:œcontextœ,œidœ:œPrompt-rZtFHœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInput",
+            "id": "ChatInput-MxLIr",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "message",
+            "id": "TextEmbedderComponent-otJ18",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__ChatInput-MxLIr{œdataTypeœ:œChatInputœ,œidœ:œChatInput-MxLIrœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-TextEmbedderComponent-otJ18{œfieldNameœ:œmessageœ,œidœ:œTextEmbedderComponent-otJ18œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ChatInput-MxLIr",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-MxLIrœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "TextEmbedderComponent-otJ18",
+        "targetHandle": "{œfieldNameœ:œmessageœ,œidœ:œTextEmbedderComponent-otJ18œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInput",
+            "id": "ChatInput-MxLIr",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "question",
+            "id": "Prompt-rZtFH",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__ChatInput-MxLIr{œdataTypeœ:œChatInputœ,œidœ:œChatInput-MxLIrœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-Prompt-rZtFH{œfieldNameœ:œquestionœ,œidœ:œPrompt-rZtFHœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ChatInput-MxLIr",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-MxLIrœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Prompt-rZtFH",
+        "targetHandle": "{œfieldNameœ:œquestionœ,œidœ:œPrompt-rZtFHœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "HuggingFaceModel",
+            "id": "HuggingFaceModel-OKxj9",
+            "name": "text_output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "ChatOutput-EpDbu",
+            "inputTypes": [
+              "Data",
+              "DataFrame",
+              "Message"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__HuggingFaceModel-OKxj9{œdataTypeœ:œHuggingFaceModelœ,œidœ:œHuggingFaceModel-OKxj9œ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}-ChatOutput-EpDbu{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-EpDbuœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "HuggingFaceModel-OKxj9",
+        "sourceHandle": "{œdataTypeœ:œHuggingFaceModelœ,œidœ:œHuggingFaceModel-OKxj9œ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "ChatOutput-EpDbu",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-EpDbuœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}"
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "description": "Get chat inputs from the Playground.",
+          "display_name": "Chat Input",
+          "id": "ChatInput-MxLIr",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Get chat inputs from the Playground.",
+            "display_name": "Chat Input",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "should_store_message",
+              "sender",
+              "sender_name",
+              "session_id",
+              "files"
+            ],
+            "frozen": false,
+            "icon": "MessagesSquare",
+            "legacy": false,
+            "lf_version": "1.5.0",
+            "metadata": {},
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Chat Message",
+                "group_outputs": false,
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "background_color": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Background Color",
+                "dynamic": false,
+                "info": "The background color of the icon.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "name": "background_color",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "chat_icon": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Icon",
+                "dynamic": false,
+                "info": "The icon of the message.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "name": "chat_icon",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.data.utils import IMG_FILE_TYPES, TEXT_FILE_TYPES\nfrom langflow.base.io.chat import ChatComponent\nfrom langflow.inputs.inputs import BoolInput\nfrom langflow.io import (\n    DropdownInput,\n    FileInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n)\nfrom langflow.schema.message import Message\nfrom langflow.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_USER,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatInput(ChatComponent):\n    display_name = \"Chat Input\"\n    description = \"Get chat inputs from the Playground.\"\n    documentation: str = \"https://docs.langflow.org/components-io#chat-input\"\n    icon = \"MessagesSquare\"\n    name = \"ChatInput\"\n    minimized = True\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Input Text\",\n            value=\"\",\n            info=\"Message to be passed as input.\",\n            input_types=[],\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_USER,\n            info=\"Type of sender.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_USER,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        FileInput(\n            name=\"files\",\n            display_name=\"Files\",\n            file_types=TEXT_FILE_TYPES + IMG_FILE_TYPES,\n            info=\"Files to be sent with the message.\",\n            advanced=True,\n            is_list=True,\n            temp_file=True,\n        ),\n        MessageTextInput(\n            name=\"background_color\",\n            display_name=\"Background Color\",\n            info=\"The background color of the icon.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"chat_icon\",\n            display_name=\"Icon\",\n            info=\"The icon of the message.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"text_color\",\n            display_name=\"Text Color\",\n            info=\"The text color of the name\",\n            advanced=True,\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Chat Message\", name=\"message\", method=\"message_response\"),\n    ]\n\n    async def message_response(self) -> Message:\n        background_color = self.background_color\n        text_color = self.text_color\n        icon = self.chat_icon\n\n        message = await Message.create(\n            text=self.input_value,\n            sender=self.sender,\n            sender_name=self.sender_name,\n            session_id=self.session_id,\n            files=self.files,\n            properties={\n                \"background_color\": background_color,\n                \"text_color\": text_color,\n                \"icon\": icon,\n            },\n        )\n        if self.session_id and isinstance(message, Message) and self.should_store_message:\n            stored_message = await self.send_message(\n                message,\n            )\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n"
+              },
+              "files": {
+                "advanced": true,
+                "display_name": "Files",
+                "dynamic": false,
+                "fileTypes": [
+                  "txt",
+                  "md",
+                  "mdx",
+                  "csv",
+                  "json",
+                  "yaml",
+                  "yml",
+                  "xml",
+                  "html",
+                  "htm",
+                  "pdf",
+                  "docx",
+                  "py",
+                  "sh",
+                  "sql",
+                  "js",
+                  "ts",
+                  "tsx",
+                  "jpg",
+                  "jpeg",
+                  "png",
+                  "bmp",
+                  "image"
+                ],
+                "file_path": "",
+                "info": "Files to be sent with the message.",
+                "list": true,
+                "name": "files",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "temp_file": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "file",
+                "value": ""
+              },
+              "input_value": {
+                "advanced": false,
+                "display_name": "Input Text",
+                "dynamic": false,
+                "info": "Message to be passed as input.",
+                "input_types": [],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "Hello"
+              },
+              "sender": {
+                "advanced": true,
+                "display_name": "Sender Type",
+                "dynamic": false,
+                "info": "Type of sender.",
+                "name": "sender",
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "User"
+              },
+              "sender_name": {
+                "advanced": true,
+                "display_name": "Sender Name",
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "name": "sender_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "User"
+              },
+              "session_id": {
+                "advanced": true,
+                "display_name": "Session ID",
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "name": "session_id",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "should_store_message": {
+                "advanced": true,
+                "display_name": "Store Messages",
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "list": false,
+                "name": "should_store_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              },
+              "text_color": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Text Color",
+                "dynamic": false,
+                "info": "The text color of the name",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "name": "text_color",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            }
+          },
+          "selected_output": "message",
+          "type": "ChatInput"
+        },
+        "dragging": false,
+        "id": "ChatInput-MxLIr",
+        "measured": {
+          "height": 203,
+          "width": 320
+        },
+        "position": {
+          "x": -2326.825576965276,
+          "y": 177.30152636209138
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "description": "Create a prompt template with dynamic variables.",
+          "display_name": "Prompt",
+          "id": "Prompt-rZtFH",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {
+              "template": [
+                "context",
+                "question"
+              ]
+            },
+            "description": "Create a prompt template with dynamic variables.",
+            "display_name": "Prompt",
+            "documentation": "",
+            "edited": false,
+            "error": null,
+            "field_order": [
+              "template"
+            ],
+            "frozen": false,
+            "full_path": null,
+            "icon": "braces",
+            "is_composition": null,
+            "is_input": null,
+            "is_output": null,
+            "legacy": false,
+            "lf_version": "1.5.0",
+            "metadata": {},
+            "minimized": false,
+            "name": "",
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Prompt",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "build_prompt",
+                "name": "prompt",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "priority": null,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.prompts.api_utils import process_prompt_template\nfrom langflow.custom.custom_component.component import Component\nfrom langflow.inputs.inputs import DefaultPromptField\nfrom langflow.io import MessageTextInput, Output, PromptInput\nfrom langflow.schema.message import Message\nfrom langflow.template.utils import update_template_values\n\n\nclass PromptComponent(Component):\n    display_name: str = \"Prompt\"\n    description: str = \"Create a prompt template with dynamic variables.\"\n    icon = \"braces\"\n    trace_type = \"prompt\"\n    name = \"Prompt\"\n\n    inputs = [\n        PromptInput(name=\"template\", display_name=\"Template\"),\n        MessageTextInput(\n            name=\"tool_placeholder\",\n            display_name=\"Tool Placeholder\",\n            tool_mode=True,\n            advanced=True,\n            info=\"A placeholder input for tool mode.\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Prompt\", name=\"prompt\", method=\"build_prompt\"),\n    ]\n\n    async def build_prompt(self) -> Message:\n        prompt = Message.from_template(**self._attributes)\n        self.status = prompt.text\n        return prompt\n\n    def _update_template(self, frontend_node: dict):\n        prompt_template = frontend_node[\"template\"][\"template\"][\"value\"]\n        custom_fields = frontend_node[\"custom_fields\"]\n        frontend_node_template = frontend_node[\"template\"]\n        _ = process_prompt_template(\n            template=prompt_template,\n            name=\"template\",\n            custom_fields=custom_fields,\n            frontend_node_template=frontend_node_template,\n        )\n        return frontend_node\n\n    async def update_frontend_node(self, new_frontend_node: dict, current_frontend_node: dict):\n        \"\"\"This function is called after the code validation is done.\"\"\"\n        frontend_node = await super().update_frontend_node(new_frontend_node, current_frontend_node)\n        template = frontend_node[\"template\"][\"template\"][\"value\"]\n        # Kept it duplicated for backwards compatibility\n        _ = process_prompt_template(\n            template=template,\n            name=\"template\",\n            custom_fields=frontend_node[\"custom_fields\"],\n            frontend_node_template=frontend_node[\"template\"],\n        )\n        # Now that template is updated, we need to grab any values that were set in the current_frontend_node\n        # and update the frontend_node with those values\n        update_template_values(new_template=frontend_node, previous_template=current_frontend_node[\"template\"])\n        return frontend_node\n\n    def _get_fallback_input(self, **kwargs):\n        return DefaultPromptField(**kwargs)\n"
+              },
+              "context": {
+                "advanced": false,
+                "display_name": "context",
+                "dynamic": false,
+                "field_type": "str",
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "context",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "question": {
+                "advanced": false,
+                "display_name": "question",
+                "dynamic": false,
+                "field_type": "str",
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "question",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "template": {
+                "advanced": false,
+                "display_name": "Template",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "name": "template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_input": true,
+                "type": "prompt",
+                "value": "{context}\n\n---\n\nОцени ответ ученика по сравнению с контекстом по заданным критериям\n\nquerry: {question}\n\nAnswer: "
+              },
+              "tool_placeholder": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Tool Placeholder",
+                "dynamic": false,
+                "info": "A placeholder input for tool mode.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "name": "tool_placeholder",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "prompt",
+          "type": "Prompt"
+        },
+        "dragging": false,
+        "id": "Prompt-rZtFH",
+        "measured": {
+          "height": 447,
+          "width": 320
+        },
+        "position": {
+          "x": -166.4614905292945,
+          "y": -37.167276210087564
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "parser-00zvY",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Format a DataFrame or Data object into text using a template. Enable 'Stringify' to convert input into a readable string instead.",
+            "display_name": "Parser",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "mode",
+              "pattern",
+              "input_data",
+              "sep"
+            ],
+            "frozen": false,
+            "icon": "braces",
+            "legacy": false,
+            "lf_version": "1.5.0",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Parsed Text",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "parse_combined_text",
+                "name": "parsed_text",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import json\nfrom typing import Any\n\nfrom langflow.custom import Component\nfrom langflow.io import (\n    BoolInput,\n    HandleInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n    TabInput,\n)\nfrom langflow.schema import Data, DataFrame\nfrom langflow.schema.message import Message\n\n\nclass ParserComponent(Component):\n    name = \"parser\"\n    display_name = \"Parser\"\n    description = (\n        \"Format a DataFrame or Data object into text using a template. \"\n        \"Enable 'Stringify' to convert input into a readable string instead.\"\n    )\n    icon = \"braces\"\n\n    inputs = [\n        TabInput(\n            name=\"mode\",\n            display_name=\"Mode\",\n            options=[\"Parser\", \"Stringify\"],\n            value=\"Parser\",\n            info=\"Convert into raw string instead of using a template.\",\n            real_time_refresh=True,\n        ),\n        MultilineInput(\n            name=\"pattern\",\n            display_name=\"Template\",\n            info=(\n                \"Use variables within curly brackets to extract column values for DataFrames \"\n                \"or key values for Data.\"\n                \"For example: `Name: {Name}, Age: {Age}, Country: {Country}`\"\n            ),\n            value=\"Text: {text}\",  # Example default\n            dynamic=True,\n            show=True,\n            required=True,\n        ),\n        HandleInput(\n            name=\"input_data\",\n            display_name=\"Data or DataFrame\",\n            input_types=[\"DataFrame\", \"Data\"],\n            info=\"Accepts either a DataFrame or a Data object.\",\n            required=True,\n        ),\n        MessageTextInput(\n            name=\"sep\",\n            display_name=\"Separator\",\n            advanced=True,\n            value=\"\\n\",\n            info=\"String used to separate rows/items.\",\n        ),\n    ]\n\n    outputs = [\n        Output(\n            display_name=\"Parsed Text\",\n            name=\"parsed_text\",\n            info=\"Formatted text output.\",\n            method=\"parse_combined_text\",\n        ),\n    ]\n\n    def update_build_config(self, build_config, field_value, field_name=None):\n        \"\"\"Dynamically hide/show `template` and enforce requirement based on `stringify`.\"\"\"\n        if field_name == \"mode\":\n            build_config[\"pattern\"][\"show\"] = self.mode == \"Parser\"\n            build_config[\"pattern\"][\"required\"] = self.mode == \"Parser\"\n            if field_value:\n                clean_data = BoolInput(\n                    name=\"clean_data\",\n                    display_name=\"Clean Data\",\n                    info=(\n                        \"Enable to clean the data by removing empty rows and lines \"\n                        \"in each cell of the DataFrame/ Data object.\"\n                    ),\n                    value=True,\n                    advanced=True,\n                    required=False,\n                )\n                build_config[\"clean_data\"] = clean_data.to_dict()\n            else:\n                build_config.pop(\"clean_data\", None)\n\n        return build_config\n\n    def _clean_args(self):\n        \"\"\"Prepare arguments based on input type.\"\"\"\n        input_data = self.input_data\n\n        match input_data:\n            case list() if all(isinstance(item, Data) for item in input_data):\n                msg = \"List of Data objects is not supported.\"\n                raise ValueError(msg)\n            case DataFrame():\n                return input_data, None\n            case Data():\n                return None, input_data\n            case dict() if \"data\" in input_data:\n                try:\n                    if \"columns\" in input_data:  # Likely a DataFrame\n                        return DataFrame.from_dict(input_data), None\n                    # Likely a Data object\n                    return None, Data(**input_data)\n                except (TypeError, ValueError, KeyError) as e:\n                    msg = f\"Invalid structured input provided: {e!s}\"\n                    raise ValueError(msg) from e\n            case _:\n                msg = f\"Unsupported input type: {type(input_data)}. Expected DataFrame or Data.\"\n                raise ValueError(msg)\n\n    def parse_combined_text(self) -> Message:\n        \"\"\"Parse all rows/items into a single text or convert input to string if `stringify` is enabled.\"\"\"\n        # Early return for stringify option\n        if self.mode == \"Stringify\":\n            return self.convert_to_string()\n\n        df, data = self._clean_args()\n\n        lines = []\n        if df is not None:\n            for _, row in df.iterrows():\n                formatted_text = self.pattern.format(**row.to_dict())\n                lines.append(formatted_text)\n        elif data is not None:\n            formatted_text = self.pattern.format(**data.data)\n            lines.append(formatted_text)\n\n        combined_text = self.sep.join(lines)\n        self.status = combined_text\n        return Message(text=combined_text)\n\n    def _safe_convert(self, data: Any) -> str:\n        \"\"\"Safely convert input data to string.\"\"\"\n        try:\n            if isinstance(data, str):\n                return data\n            if isinstance(data, Message):\n                return data.get_text()\n            if isinstance(data, Data):\n                return json.dumps(data.data)\n            if isinstance(data, DataFrame):\n                if hasattr(self, \"clean_data\") and self.clean_data:\n                    # Remove empty rows\n                    data = data.dropna(how=\"all\")\n                    # Remove empty lines in each cell\n                    data = data.replace(r\"^\\s*$\", \"\", regex=True)\n                    # Replace multiple newlines with a single newline\n                    data = data.replace(r\"\\n+\", \"\\n\", regex=True)\n                return data.to_markdown(index=False)\n            return str(data)\n        except (ValueError, TypeError, AttributeError) as e:\n            msg = f\"Error converting data: {e!s}\"\n            raise ValueError(msg) from e\n\n    def convert_to_string(self) -> Message:\n        \"\"\"Convert input data to string with proper error handling.\"\"\"\n        result = \"\"\n        if isinstance(self.input_data, list):\n            result = \"\\n\".join([self._safe_convert(item) for item in self.input_data])\n        else:\n            result = self._safe_convert(self.input_data)\n        self.log(f\"Converted to string with length: {len(result)}\")\n\n        message = Message(text=result)\n        self.status = message\n        return message\n"
+              },
+              "input_data": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Data or DataFrame",
+                "dynamic": false,
+                "info": "Accepts either a DataFrame or a Data object.",
+                "input_types": [
+                  "DataFrame",
+                  "Data"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "input_data",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "mode": {
+                "_input_type": "TabInput",
+                "advanced": false,
+                "display_name": "Mode",
+                "dynamic": false,
+                "info": "Convert into raw string instead of using a template.",
+                "name": "mode",
+                "options": [
+                  "Parser",
+                  "Stringify"
+                ],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "tab",
+                "value": "Parser"
+              },
+              "pattern": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Template",
+                "dynamic": true,
+                "info": "Use variables within curly brackets to extract column values for DataFrames or key values for Data.For example: `Name: {Name}, Age: {Age}, Country: {Country}`",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "pattern",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "'Лучшее решение: {best_solution}, Формулировка задачи: {case_text}, Ключевые слова: {keywords},  Навыки: {skills}'"
+              },
+              "sep": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Separator",
+                "dynamic": false,
+                "info": "String used to separate rows/items.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "sep",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "\n"
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "parsed_text",
+          "showNode": true,
+          "type": "parser"
+        },
+        "dragging": false,
+        "id": "parser-00zvY",
+        "measured": {
+          "height": 359,
+          "width": 320
+        },
+        "position": {
+          "x": -545.7555345048661,
+          "y": 478.9196345359241
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "HuggingFaceInferenceAPIEmbeddings-DzSQ1",
+          "node": {
+            "base_classes": [
+              "Embeddings"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generate embeddings using HuggingFace Text Embeddings Inference (TEI)",
+            "display_name": "HuggingFace Embeddings Inference",
+            "documentation": "https://huggingface.co/docs/text-embeddings-inference/index",
+            "edited": false,
+            "field_order": [
+              "api_key",
+              "inference_endpoint",
+              "model_name"
+            ],
+            "frozen": false,
+            "icon": "HuggingFace",
+            "legacy": false,
+            "lf_version": "1.5.0",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Embeddings",
+                "group_outputs": false,
+                "method": "build_embeddings",
+                "name": "embeddings",
+                "selected": "Embeddings",
+                "tool_mode": true,
+                "types": [
+                  "Embeddings"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "API Key",
+                "dynamic": false,
+                "info": "Required for non-local inference endpoints. Local inference does not require an API Key.",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "api_key",
+                "password": true,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": "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"
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from urllib.parse import urlparse\n\nimport requests\nfrom langchain_community.embeddings.huggingface import HuggingFaceInferenceAPIEmbeddings\n\n# Next update: use langchain_huggingface\nfrom pydantic import SecretStr\nfrom tenacity import retry, stop_after_attempt, wait_fixed\n\nfrom langflow.base.embeddings.model import LCEmbeddingsModel\nfrom langflow.field_typing import Embeddings\nfrom langflow.io import MessageTextInput, Output, SecretStrInput\n\n\nclass HuggingFaceInferenceAPIEmbeddingsComponent(LCEmbeddingsModel):\n    display_name = \"HuggingFace Embeddings Inference\"\n    description = \"Generate embeddings using HuggingFace Text Embeddings Inference (TEI)\"\n    documentation = \"https://huggingface.co/docs/text-embeddings-inference/index\"\n    icon = \"HuggingFace\"\n    name = \"HuggingFaceInferenceAPIEmbeddings\"\n\n    inputs = [\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"API Key\",\n            advanced=False,\n            info=\"Required for non-local inference endpoints. Local inference does not require an API Key.\",\n        ),\n        MessageTextInput(\n            name=\"inference_endpoint\",\n            display_name=\"Inference Endpoint\",\n            required=True,\n            value=\"https://api-inference.huggingface.co/models/\",\n            info=\"Custom inference endpoint URL.\",\n        ),\n        MessageTextInput(\n            name=\"model_name\",\n            display_name=\"Model Name\",\n            value=\"BAAI/bge-large-en-v1.5\",\n            info=\"The name of the model to use for text embeddings.\",\n            required=True,\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Embeddings\", name=\"embeddings\", method=\"build_embeddings\"),\n    ]\n\n    def validate_inference_endpoint(self, inference_endpoint: str) -> bool:\n        parsed_url = urlparse(inference_endpoint)\n        if not all([parsed_url.scheme, parsed_url.netloc]):\n            msg = (\n                f\"Invalid inference endpoint format: '{self.inference_endpoint}'. \"\n                \"Please ensure the URL includes both a scheme (e.g., 'http://' or 'https://') and a domain name. \"\n                \"Example: 'http://localhost:8080' or 'https://api.example.com'\"\n            )\n            raise ValueError(msg)\n\n        try:\n            response = requests.get(f\"{inference_endpoint}/health\", timeout=5)\n        except requests.RequestException as e:\n            msg = (\n                f\"Inference endpoint '{inference_endpoint}' is not responding. \"\n                \"Please ensure the URL is correct and the service is running.\"\n            )\n            raise ValueError(msg) from e\n\n        if response.status_code != requests.codes.ok:\n            msg = f\"HuggingFace health check failed: {response.status_code}\"\n            raise ValueError(msg)\n        # returning True to solve linting error\n        return True\n\n    def get_api_url(self) -> str:\n        if \"huggingface\" in self.inference_endpoint.lower():\n            return f\"{self.inference_endpoint}\"\n        return self.inference_endpoint\n\n    @retry(stop=stop_after_attempt(3), wait=wait_fixed(2))\n    def create_huggingface_embeddings(\n        self, api_key: SecretStr, api_url: str, model_name: str\n    ) -> HuggingFaceInferenceAPIEmbeddings:\n        return HuggingFaceInferenceAPIEmbeddings(api_key=api_key, api_url=api_url, model_name=model_name)\n\n    def build_embeddings(self) -> Embeddings:\n        api_url = self.get_api_url()\n\n        is_local_url = (\n            api_url.startswith((\"http://localhost\", \"http://127.0.0.1\", \"http://0.0.0.0\", \"http://docker\"))\n            or \"huggingface.co\" not in api_url.lower()\n        )\n\n        if not self.api_key and is_local_url:\n            self.validate_inference_endpoint(api_url)\n            api_key = SecretStr(\"APIKeyForLocalDeployment\")\n        elif not self.api_key:\n            msg = \"API Key is required for non-local inference endpoints\"\n            raise ValueError(msg)\n        else:\n            api_key = SecretStr(self.api_key).get_secret_value()\n\n        try:\n            return self.create_huggingface_embeddings(api_key, api_url, self.model_name)\n        except Exception as e:\n            msg = \"Could not connect to HuggingFace Inference API.\"\n            raise ValueError(msg) from e\n"
+              },
+              "inference_endpoint": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Inference Endpoint",
+                "dynamic": false,
+                "info": "Custom inference endpoint URL.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "inference_endpoint",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "https://api-inference.huggingface.co/models/"
+              },
+              "model_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Model Name",
+                "dynamic": false,
+                "info": "The name of the model to use for text embeddings.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "model_name",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "intfloat/multilingual-e5-large-instruct"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "HuggingFaceInferenceAPIEmbeddings"
+        },
+        "dragging": false,
+        "id": "HuggingFaceInferenceAPIEmbeddings-DzSQ1",
+        "measured": {
+          "height": 383,
+          "width": 320
+        },
+        "position": {
+          "x": -2335.234036737007,
+          "y": 405.51710629945944
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "TextEmbedderComponent-otJ18",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": false,
+            "category": "embeddings",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generate embeddings for a given message using the specified embedding model.",
+            "display_name": "Text Embedder",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "embedding_model",
+              "message"
+            ],
+            "frozen": false,
+            "icon": "binary",
+            "key": "TextEmbedderComponent",
+            "legacy": true,
+            "lf_version": "1.5.0",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Embedding Data",
+                "group_outputs": false,
+                "method": "generate_embeddings",
+                "name": "embeddings",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 8.569061098350962e-12,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import logging\nfrom typing import TYPE_CHECKING\n\nfrom langflow.custom.custom_component.component import Component\nfrom langflow.io import HandleInput, MessageInput, Output\nfrom langflow.schema.data import Data\n\nif TYPE_CHECKING:\n    from langflow.field_typing import Embeddings\n    from langflow.schema.message import Message\n\n\nclass TextEmbedderComponent(Component):\n    display_name: str = \"Text Embedder\"\n    description: str = \"Generate embeddings for a given message using the specified embedding model.\"\n    icon = \"binary\"\n    legacy: bool = True\n    inputs = [\n        HandleInput(\n            name=\"embedding_model\",\n            display_name=\"Embedding Model\",\n            info=\"The embedding model to use for generating embeddings.\",\n            input_types=[\"Embeddings\"],\n            required=True,\n        ),\n        MessageInput(\n            name=\"message\",\n            display_name=\"Message\",\n            info=\"The message to generate embeddings for.\",\n            required=True,\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Embedding Data\", name=\"embeddings\", method=\"generate_embeddings\"),\n    ]\n\n    def generate_embeddings(self) -> Data:\n        try:\n            embedding_model: Embeddings = self.embedding_model\n            message: Message = self.message\n\n            # Combine validation checks to reduce nesting\n            if not embedding_model or not hasattr(embedding_model, \"embed_documents\"):\n                msg = \"Invalid or incompatible embedding model\"\n                raise ValueError(msg)\n\n            text_content = message.text if message and message.text else \"\"\n            if not text_content:\n                msg = \"No text content found in message\"\n                raise ValueError(msg)\n\n            embeddings = embedding_model.embed_documents([text_content])\n            if not embeddings or not isinstance(embeddings, list):\n                msg = \"Invalid embeddings generated\"\n                raise ValueError(msg)\n\n            embedding_vector = embeddings[0]\n            self.status = {\"text\": text_content, \"embeddings\": embedding_vector}\n            return Data(data={\"text\": text_content, \"embeddings\": embedding_vector})\n        except Exception as e:\n            logging.exception(\"Error generating embeddings\")\n            error_data = Data(data={\"text\": \"\", \"embeddings\": [], \"error\": str(e)})\n            self.status = {\"error\": str(e)}\n            return error_data\n"
+              },
+              "embedding_model": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Embedding Model",
+                "dynamic": false,
+                "info": "The embedding model to use for generating embeddings.",
+                "input_types": [
+                  "Embeddings"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "embedding_model",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "message": {
+                "_input_type": "MessageInput",
+                "advanced": false,
+                "display_name": "Message",
+                "dynamic": false,
+                "info": "The message to generate embeddings for.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "message",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "TextEmbedderComponent"
+        },
+        "dragging": false,
+        "id": "TextEmbedderComponent-otJ18",
+        "measured": {
+          "height": 263,
+          "width": 320
+        },
+        "position": {
+          "x": -1436.6938817191558,
+          "y": 301.8920016457397
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "EmbeddingSimilarityComponent-4vbrZ",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": false,
+            "category": "embeddings",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Compute selected form of similarity between two embedding vectors.",
+            "display_name": "Embedding Similarity",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "embedding_vectors",
+              "similarity_metric"
+            ],
+            "frozen": false,
+            "icon": "equal",
+            "key": "EmbeddingSimilarityComponent",
+            "legacy": true,
+            "lf_version": "1.5.0",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Similarity Data",
+                "group_outputs": false,
+                "method": "compute_similarity",
+                "name": "similarity_data",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 0.1963360276836047,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from typing import Any\n\nimport numpy as np\n\nfrom langflow.custom.custom_component.component import Component\nfrom langflow.io import DataInput, DropdownInput, Output\nfrom langflow.schema.data import Data\n\n\nclass EmbeddingSimilarityComponent(Component):\n    display_name: str = \"Embedding Similarity\"\n    description: str = \"Compute selected form of similarity between two embedding vectors.\"\n    icon = \"equal\"\n    legacy: bool = True\n\n    inputs = [\n        DataInput(\n            name=\"embedding_vectors\",\n            display_name=\"Embedding Vectors\",\n            info=\"A list containing exactly two data objects with embedding vectors to compare.\",\n            is_list=True,\n            required=True,\n        ),\n        DropdownInput(\n            name=\"similarity_metric\",\n            display_name=\"Similarity Metric\",\n            info=\"Select the similarity metric to use.\",\n            options=[\"Cosine Similarity\", \"Euclidean Distance\", \"Manhattan Distance\"],\n            value=\"Cosine Similarity\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Similarity Data\", name=\"similarity_data\", method=\"compute_similarity\"),\n    ]\n\n    def compute_similarity(self) -> Data:\n        embedding_vectors: list[Data] = self.embedding_vectors\n\n        # Assert that the list contains exactly two Data objects\n        if len(embedding_vectors) != 2:  # noqa: PLR2004\n            msg = \"Exactly two embedding vectors are required.\"\n            raise ValueError(msg)\n\n        embedding_1 = np.array(embedding_vectors[0].data[\"embeddings\"])\n        embedding_2 = np.array(embedding_vectors[1].data[\"embeddings\"])\n\n        if embedding_1.shape != embedding_2.shape:\n            similarity_score: dict[str, Any] = {\"error\": \"Embeddings must have the same dimensions.\"}\n        else:\n            similarity_metric = self.similarity_metric\n\n            if similarity_metric == \"Cosine Similarity\":\n                score = np.dot(embedding_1, embedding_2) / (np.linalg.norm(embedding_1) * np.linalg.norm(embedding_2))\n                similarity_score = {\"cosine_similarity\": score}\n\n            elif similarity_metric == \"Euclidean Distance\":\n                score = np.linalg.norm(embedding_1 - embedding_2)\n                similarity_score = {\"euclidean_distance\": score}\n\n            elif similarity_metric == \"Manhattan Distance\":\n                score = np.sum(np.abs(embedding_1 - embedding_2))\n                similarity_score = {\"manhattan_distance\": score}\n\n        # Create a Data object to encapsulate the similarity score and additional information\n        similarity_data = Data(\n            data={\n                \"embedding_1\": embedding_vectors[0].data[\"embeddings\"],\n                \"embedding_2\": embedding_vectors[1].data[\"embeddings\"],\n                \"similarity_score\": similarity_score,\n            },\n            text_key=\"similarity_score\",\n        )\n\n        self.status = similarity_data\n        return similarity_data\n"
+              },
+              "embedding_vectors": {
+                "_input_type": "DataInput",
+                "advanced": false,
+                "display_name": "Embedding Vectors",
+                "dynamic": false,
+                "info": "A list containing exactly two data objects with embedding vectors to compare.",
+                "input_types": [
+                  "Data"
+                ],
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "embedding_vectors",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "similarity_metric": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Similarity Metric",
+                "dynamic": false,
+                "info": "Select the similarity metric to use.",
+                "name": "similarity_metric",
+                "options": [
+                  "Cosine Similarity",
+                  "Euclidean Distance",
+                  "Manhattan Distance"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "Cosine Similarity"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "EmbeddingSimilarityComponent"
+        },
+        "dragging": false,
+        "id": "EmbeddingSimilarityComponent-4vbrZ",
+        "measured": {
+          "height": 263,
+          "width": 320
+        },
+        "position": {
+          "x": -940.939721380302,
+          "y": 683.557538905638
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "pgvector-zEiHu",
+          "node": {
+            "base_classes": [
+              "Data",
+              "DataFrame"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "PGVector Vector Store with search capabilities",
+            "display_name": "PGVector",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "pg_server_url",
+              "collection_name",
+              "ingest_data",
+              "search_query",
+              "should_cache_vector_store",
+              "embedding",
+              "number_of_results"
+            ],
+            "frozen": false,
+            "icon": "cpu",
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Search Results",
+                "group_outputs": false,
+                "method": "search_documents",
+                "name": "search_results",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "DataFrame",
+                "group_outputs": false,
+                "method": "as_dataframe",
+                "name": "dataframe",
+                "tool_mode": true,
+                "types": [
+                  "DataFrame"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langchain_community.vectorstores import PGVector\n\nfrom langflow.base.vectorstores.model import LCVectorStoreComponent, check_cached_vector_store\nfrom langflow.helpers.data import docs_to_data\nfrom langflow.io import HandleInput, IntInput, SecretStrInput, StrInput\nfrom langflow.schema.data import Data\nfrom langflow.utils.connection_string_parser import transform_connection_string\n\n\nclass PGVectorStoreComponent(LCVectorStoreComponent):\n    display_name = \"PGVector\"\n    description = \"PGVector Vector Store with search capabilities\"\n    name = \"pgvector\"\n    icon = \"cpu\"\n\n    inputs = [\n        SecretStrInput(name=\"pg_server_url\", display_name=\"PostgreSQL Server Connection String\", required=True),\n        StrInput(name=\"collection_name\", display_name=\"Table\", required=True),\n        *LCVectorStoreComponent.inputs,\n        HandleInput(name=\"embedding\", display_name=\"Embedding\", input_types=[\"Embeddings\"], required=True),\n        IntInput(\n            name=\"number_of_results\",\n            display_name=\"Number of Results\",\n            info=\"Number of results to return.\",\n            value=4,\n            advanced=True,\n        ),\n    ]\n\n    @check_cached_vector_store\n    def build_vector_store(self) -> PGVector:\n        # Convert DataFrame to Data if needed using parent's method\n        self.ingest_data = self._prepare_ingest_data()\n\n        documents = []\n        for _input in self.ingest_data or []:\n            if isinstance(_input, Data):\n                documents.append(_input.to_lc_document())\n            else:\n                documents.append(_input)\n\n        connection_string_parsed = transform_connection_string(self.pg_server_url)\n\n        if documents:\n            pgvector = PGVector.from_documents(\n                embedding=self.embedding,\n                documents=documents,\n                collection_name=self.collection_name,\n                connection_string=connection_string_parsed,\n            )\n        else:\n            pgvector = PGVector.from_existing_index(\n                embedding=self.embedding,\n                collection_name=self.collection_name,\n                connection_string=connection_string_parsed,\n            )\n\n        return pgvector\n\n    def search_documents(self) -> list[Data]:\n        vector_store = self.build_vector_store()\n\n        if self.search_query and isinstance(self.search_query, str) and self.search_query.strip():\n            docs = vector_store.similarity_search(\n                query=self.search_query,\n                k=self.number_of_results,\n            )\n\n            data = docs_to_data(docs)\n            self.status = data\n            return data\n        return []\n"
+              },
+              "collection_name": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "Table",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "collection_name",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "cases"
+              },
+              "embedding": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Embedding",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Embeddings"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "embedding",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "ingest_data": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Ingest Data",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Data",
+                  "DataFrame"
+                ],
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "ingest_data",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "number_of_results": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Number of Results",
+                "dynamic": false,
+                "info": "Number of results to return.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "number_of_results",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": 4
+              },
+              "pg_server_url": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "PostgreSQL Server Connection String",
+                "dynamic": false,
+                "info": "",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "pg_server_url",
+                "password": true,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": "postgresql+psycopg2://postgres:secret@localhost:5432/main"
+              },
+              "search_query": {
+                "_input_type": "QueryInput",
+                "advanced": false,
+                "display_name": "Search Query",
+                "dynamic": false,
+                "info": "Enter a query to run a similarity search.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "search_query",
+                "placeholder": "Enter a query...",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "query",
+                "value": ""
+              },
+              "should_cache_vector_store": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Cache Vector Store",
+                "dynamic": false,
+                "info": "If True, the vector store will be cached for the current build of the component. This is useful for components that have multiple output methods and want to share the same vector store.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "should_cache_vector_store",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "search_results",
+          "showNode": true,
+          "type": "pgvector"
+        },
+        "dragging": false,
+        "id": "pgvector-zEiHu",
+        "measured": {
+          "height": 455,
+          "width": 320
+        },
+        "position": {
+          "x": -1431.4898006437888,
+          "y": 581.069804731346
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "HuggingFaceModel-OKxj9",
+          "node": {
+            "base_classes": [
+              "LanguageModel",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generate text using Hugging Face Inference APIs.",
+            "display_name": "HuggingFace",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "system_message",
+              "stream",
+              "model_id",
+              "custom_model",
+              "max_new_tokens",
+              "top_k",
+              "top_p",
+              "typical_p",
+              "temperature",
+              "repetition_penalty",
+              "inference_endpoint",
+              "task",
+              "huggingfacehub_api_token",
+              "model_kwargs",
+              "retry_attempts"
+            ],
+            "frozen": false,
+            "icon": "HuggingFace",
+            "legacy": false,
+            "metadata": {
+              "keywords": [
+                "model",
+                "llm",
+                "language model",
+                "large language model"
+              ]
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Model Response",
+                "group_outputs": false,
+                "method": "text_response",
+                "name": "text_output",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Language Model",
+                "group_outputs": false,
+                "method": "build_model",
+                "name": "model_output",
+                "tool_mode": true,
+                "types": [
+                  "LanguageModel"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from typing import Any\n\nfrom langchain_community.llms.huggingface_endpoint import HuggingFaceEndpoint\nfrom tenacity import retry, stop_after_attempt, wait_fixed\n\nfrom langflow.base.models.model import LCModelComponent\nfrom langflow.field_typing import LanguageModel\nfrom langflow.field_typing.range_spec import RangeSpec\nfrom langflow.io import DictInput, DropdownInput, FloatInput, IntInput, SecretStrInput, SliderInput, StrInput\n\n# TODO: langchain_community.llms.huggingface_endpoint is depreciated.\n#  Need to update to langchain_huggingface, but have dependency with langchain_core 0.3.0\n\n# Constants\nDEFAULT_MODEL = \"meta-llama/Llama-3.3-70B-Instruct\"\n\n\nclass HuggingFaceEndpointsComponent(LCModelComponent):\n    display_name: str = \"HuggingFace\"\n    description: str = \"Generate text using Hugging Face Inference APIs.\"\n    icon = \"HuggingFace\"\n    name = \"HuggingFaceModel\"\n\n    inputs = [\n        *LCModelComponent._base_inputs,\n        DropdownInput(\n            name=\"model_id\",\n            display_name=\"Model ID\",\n            info=\"Select a model from HuggingFace Hub\",\n            options=[\n                DEFAULT_MODEL,\n                \"mistralai/Mixtral-8x7B-Instruct-v0.1\",\n                \"mistralai/Mistral-7B-Instruct-v0.3\",\n                \"meta-llama/Llama-3.1-8B-Instruct\",\n                \"Qwen/Qwen2.5-Coder-32B-Instruct\",\n                \"Qwen/QwQ-32B-Preview\",\n                \"openai-community/gpt2\",\n                \"custom\",\n            ],\n            value=DEFAULT_MODEL,\n            required=True,\n            real_time_refresh=True,\n        ),\n        StrInput(\n            name=\"custom_model\",\n            display_name=\"Custom Model ID\",\n            info=\"Enter a custom model ID from HuggingFace Hub\",\n            value=\"\",\n            show=False,\n            required=True,\n        ),\n        IntInput(\n            name=\"max_new_tokens\", display_name=\"Max New Tokens\", value=512, info=\"Maximum number of generated tokens\"\n        ),\n        IntInput(\n            name=\"top_k\",\n            display_name=\"Top K\",\n            advanced=True,\n            info=\"The number of highest probability vocabulary tokens to keep for top-k-filtering\",\n        ),\n        FloatInput(\n            name=\"top_p\",\n            display_name=\"Top P\",\n            value=0.95,\n            advanced=True,\n            info=(\n                \"If set to < 1, only the smallest set of most probable tokens with \"\n                \"probabilities that add up to `top_p` or higher are kept for generation\"\n            ),\n        ),\n        FloatInput(\n            name=\"typical_p\",\n            display_name=\"Typical P\",\n            value=0.95,\n            advanced=True,\n            info=\"Typical Decoding mass.\",\n        ),\n        SliderInput(\n            name=\"temperature\",\n            display_name=\"Temperature\",\n            value=0.8,\n            range_spec=RangeSpec(min=0, max=2, step=0.01),\n            info=\"The value used to module the logits distribution\",\n            advanced=True,\n        ),\n        FloatInput(\n            name=\"repetition_penalty\",\n            display_name=\"Repetition Penalty\",\n            info=\"The parameter for repetition penalty. 1.0 means no penalty.\",\n            advanced=True,\n        ),\n        StrInput(\n            name=\"inference_endpoint\",\n            display_name=\"Inference Endpoint\",\n            value=\"https://api-inference.huggingface.co/models/\",\n            info=\"Custom inference endpoint URL.\",\n            required=True,\n        ),\n        DropdownInput(\n            name=\"task\",\n            display_name=\"Task\",\n            options=[\"text2text-generation\", \"text-generation\", \"summarization\", \"translation\"],\n            value=\"text-generation\",\n            advanced=True,\n            info=\"The task to call the model with. Should be a task that returns `generated_text` or `summary_text`.\",\n        ),\n        SecretStrInput(name=\"huggingfacehub_api_token\", display_name=\"API Token\", password=True, required=True),\n        DictInput(name=\"model_kwargs\", display_name=\"Model Keyword Arguments\", advanced=True),\n        IntInput(name=\"retry_attempts\", display_name=\"Retry Attempts\", value=1, advanced=True),\n    ]\n\n    def get_api_url(self) -> str:\n        if \"huggingface\" in self.inference_endpoint.lower():\n            if self.model_id == \"custom\":\n                if not self.custom_model:\n                    error_msg = \"Custom model ID is required when 'custom' is selected\"\n                    raise ValueError(error_msg)\n                return f\"{self.inference_endpoint}{self.custom_model}\"\n            return f\"{self.inference_endpoint}{self.model_id}\"\n        return self.inference_endpoint\n\n    async def update_build_config(self, build_config: dict, field_value: Any, field_name: str | None = None) -> dict:\n        \"\"\"Update build configuration based on field updates.\"\"\"\n        try:\n            if field_name is None or field_name == \"model_id\":\n                # If model_id is custom, show custom model field\n                if field_value == \"custom\":\n                    build_config[\"custom_model\"][\"show\"] = True\n                    build_config[\"custom_model\"][\"required\"] = True\n                else:\n                    build_config[\"custom_model\"][\"show\"] = False\n                    build_config[\"custom_model\"][\"value\"] = \"\"\n\n        except (KeyError, AttributeError) as e:\n            self.log(f\"Error updating build config: {e!s}\")\n        return build_config\n\n    def create_huggingface_endpoint(\n        self,\n        task: str | None,\n        huggingfacehub_api_token: str | None,\n        model_kwargs: dict[str, Any],\n        max_new_tokens: int,\n        top_k: int | None,\n        top_p: float,\n        typical_p: float | None,\n        temperature: float | None,\n        repetition_penalty: float | None,\n    ) -> HuggingFaceEndpoint:\n        retry_attempts = self.retry_attempts\n        endpoint_url = self.get_api_url()\n\n        @retry(stop=stop_after_attempt(retry_attempts), wait=wait_fixed(2))\n        def _attempt_create():\n            return HuggingFaceEndpoint(\n                endpoint_url=endpoint_url,\n                task=task,\n                huggingfacehub_api_token=huggingfacehub_api_token,\n                model_kwargs=model_kwargs,\n                max_new_tokens=max_new_tokens,\n                top_k=top_k,\n                top_p=top_p,\n                typical_p=typical_p,\n                temperature=temperature,\n                repetition_penalty=repetition_penalty,\n            )\n\n        return _attempt_create()\n\n    def build_model(self) -> LanguageModel:\n        task = self.task or None\n        huggingfacehub_api_token = self.huggingfacehub_api_token\n        model_kwargs = self.model_kwargs or {}\n        max_new_tokens = self.max_new_tokens\n        top_k = self.top_k or None\n        top_p = self.top_p\n        typical_p = self.typical_p or None\n        temperature = self.temperature or 0.8\n        repetition_penalty = self.repetition_penalty or None\n\n        try:\n            llm = self.create_huggingface_endpoint(\n                task=task,\n                huggingfacehub_api_token=huggingfacehub_api_token,\n                model_kwargs=model_kwargs,\n                max_new_tokens=max_new_tokens,\n                top_k=top_k,\n                top_p=top_p,\n                typical_p=typical_p,\n                temperature=temperature,\n                repetition_penalty=repetition_penalty,\n            )\n        except Exception as e:\n            msg = \"Could not connect to HuggingFace Endpoints API.\"\n            raise ValueError(msg) from e\n\n        return llm\n"
+              },
+              "custom_model": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "Custom Model ID",
+                "dynamic": false,
+                "info": "Enter a custom model ID from HuggingFace Hub",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "custom_model",
+                "placeholder": "",
+                "required": true,
+                "show": false,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "huggingfacehub_api_token": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "API Token",
+                "dynamic": false,
+                "info": "",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "huggingfacehub_api_token",
+                "password": true,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": "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"
+              },
+              "inference_endpoint": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "Inference Endpoint",
+                "dynamic": false,
+                "info": "Custom inference endpoint URL.",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "inference_endpoint",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "https://api-inference.huggingface.co/models/"
+              },
+              "input_value": {
+                "_input_type": "MessageInput",
+                "advanced": false,
+                "display_name": "Input",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "max_new_tokens": {
+                "_input_type": "IntInput",
+                "advanced": false,
+                "display_name": "Max New Tokens",
+                "dynamic": false,
+                "info": "Maximum number of generated tokens",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "max_new_tokens",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": 512
+              },
+              "model_id": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Model ID",
+                "dynamic": false,
+                "info": "Select a model from HuggingFace Hub",
+                "name": "model_id",
+                "options": [
+                  "meta-llama/Llama-3.3-70B-Instruct",
+                  "mistralai/Mixtral-8x7B-Instruct-v0.1",
+                  "mistralai/Mistral-7B-Instruct-v0.3",
+                  "meta-llama/Llama-3.1-8B-Instruct",
+                  "Qwen/Qwen2.5-Coder-32B-Instruct",
+                  "Qwen/QwQ-32B-Preview",
+                  "openai-community/gpt2",
+                  "custom"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "meta-llama/Llama-3.3-70B-Instruct"
+              },
+              "model_kwargs": {
+                "_input_type": "DictInput",
+                "advanced": true,
+                "display_name": "Model Keyword Arguments",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "model_kwargs",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "dict",
+                "value": {}
+              },
+              "repetition_penalty": {
+                "_input_type": "FloatInput",
+                "advanced": true,
+                "display_name": "Repetition Penalty",
+                "dynamic": false,
+                "info": "The parameter for repetition penalty. 1.0 means no penalty.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "repetition_penalty",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "float",
+                "value": ""
+              },
+              "retry_attempts": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Retry Attempts",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "retry_attempts",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": 1
+              },
+              "stream": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Stream",
+                "dynamic": false,
+                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "stream",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "system_message": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "System Message",
+                "dynamic": false,
+                "info": "System message to pass to the model.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "system_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "task": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Task",
+                "dynamic": false,
+                "info": "The task to call the model with. Should be a task that returns `generated_text` or `summary_text`.",
+                "name": "task",
+                "options": [
+                  "text2text-generation",
+                  "text-generation",
+                  "summarization",
+                  "translation"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "text-generation"
+              },
+              "temperature": {
+                "_input_type": "SliderInput",
+                "advanced": true,
+                "display_name": "Temperature",
+                "dynamic": false,
+                "info": "The value used to module the logits distribution",
+                "max_label": "",
+                "max_label_icon": "",
+                "min_label": "",
+                "min_label_icon": "",
+                "name": "temperature",
+                "placeholder": "",
+                "range_spec": {
+                  "max": 2,
+                  "min": 0,
+                  "step": 0.01,
+                  "step_type": "float"
+                },
+                "required": false,
+                "show": true,
+                "slider_buttons": false,
+                "slider_buttons_options": [],
+                "slider_input": false,
+                "title_case": false,
+                "tool_mode": false,
+                "type": "slider",
+                "value": 0.8
+              },
+              "top_k": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Top K",
+                "dynamic": false,
+                "info": "The number of highest probability vocabulary tokens to keep for top-k-filtering",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "top_k",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "top_p": {
+                "_input_type": "FloatInput",
+                "advanced": true,
+                "display_name": "Top P",
+                "dynamic": false,
+                "info": "If set to < 1, only the smallest set of most probable tokens with probabilities that add up to `top_p` or higher are kept for generation",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "top_p",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "float",
+                "value": 0.95
+              },
+              "typical_p": {
+                "_input_type": "FloatInput",
+                "advanced": true,
+                "display_name": "Typical P",
+                "dynamic": false,
+                "info": "Typical Decoding mass.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "typical_p",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "float",
+                "value": 0.95
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "text_output",
+          "showNode": true,
+          "type": "HuggingFaceModel"
+        },
+        "dragging": false,
+        "id": "HuggingFaceModel-OKxj9",
+        "measured": {
+          "height": 613,
+          "width": 320
+        },
+        "position": {
+          "x": 306.4723892032203,
+          "y": -145.89652746098642
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "Prompt Template-AgWtC",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {
+              "template": [
+                "submission_id"
+              ]
+            },
+            "description": "Create a prompt template with dynamic variables.",
+            "display_name": "Prompt Template",
+            "documentation": "https://docs.langflow.org/components-prompts",
+            "edited": false,
+            "error": null,
+            "field_order": [
+              "template",
+              "tool_placeholder"
+            ],
+            "frozen": false,
+            "full_path": null,
+            "icon": "braces",
+            "is_composition": null,
+            "is_input": null,
+            "is_output": null,
+            "legacy": false,
+            "lf_version": "1.5.0",
+            "metadata": {},
+            "minimized": false,
+            "name": "",
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Prompt",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "build_prompt",
+                "name": "prompt",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "priority": 0,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.prompts.api_utils import process_prompt_template\nfrom langflow.custom.custom_component.component import Component\nfrom langflow.inputs.inputs import DefaultPromptField\nfrom langflow.io import MessageTextInput, Output, PromptInput\nfrom langflow.schema.message import Message\nfrom langflow.template.utils import update_template_values\n\n\nclass PromptComponent(Component):\n    display_name: str = \"Prompt Template\"\n    description: str = \"Create a prompt template with dynamic variables.\"\n    documentation: str = \"https://docs.langflow.org/components-prompts\"\n    icon = \"braces\"\n    trace_type = \"prompt\"\n    name = \"Prompt Template\"\n    priority = 0  # Set priority to 0 to make it appear first\n\n    inputs = [\n        PromptInput(name=\"template\", display_name=\"Template\"),\n        MessageTextInput(\n            name=\"tool_placeholder\",\n            display_name=\"Tool Placeholder\",\n            tool_mode=True,\n            advanced=True,\n            info=\"A placeholder input for tool mode.\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Prompt\", name=\"prompt\", method=\"build_prompt\"),\n    ]\n\n    async def build_prompt(self) -> Message:\n        prompt = Message.from_template(**self._attributes)\n        self.status = prompt.text\n        return prompt\n\n    def _update_template(self, frontend_node: dict):\n        prompt_template = frontend_node[\"template\"][\"template\"][\"value\"]\n        custom_fields = frontend_node[\"custom_fields\"]\n        frontend_node_template = frontend_node[\"template\"]\n        _ = process_prompt_template(\n            template=prompt_template,\n            name=\"template\",\n            custom_fields=custom_fields,\n            frontend_node_template=frontend_node_template,\n        )\n        return frontend_node\n\n    async def update_frontend_node(self, new_frontend_node: dict, current_frontend_node: dict):\n        \"\"\"This function is called after the code validation is done.\"\"\"\n        frontend_node = await super().update_frontend_node(new_frontend_node, current_frontend_node)\n        template = frontend_node[\"template\"][\"template\"][\"value\"]\n        # Kept it duplicated for backwards compatibility\n        _ = process_prompt_template(\n            template=template,\n            name=\"template\",\n            custom_fields=frontend_node[\"custom_fields\"],\n            frontend_node_template=frontend_node[\"template\"],\n        )\n        # Now that template is updated, we need to grab any values that were set in the current_frontend_node\n        # and update the frontend_node with those values\n        update_template_values(new_template=frontend_node, previous_template=current_frontend_node[\"template\"])\n        return frontend_node\n\n    def _get_fallback_input(self, **kwargs):\n        return DefaultPromptField(**kwargs)\n"
+              },
+              "submission_id": {
+                "advanced": false,
+                "display_name": "submission_id",
+                "dynamic": false,
+                "field_type": "str",
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "submission_id",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "template": {
+                "_input_type": "PromptInput",
+                "advanced": false,
+                "display_name": "Template",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "prompt",
+                "value": "-- Эталонное решение\nSELECT c.best_solution\nFROM cases c\nJOIN submissions s ON s.case_id = c.case_id\nWHERE s.submission_id = '{submission_id}'::uuid;\n"
+              },
+              "tool_placeholder": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Tool Placeholder",
+                "dynamic": false,
+                "info": "A placeholder input for tool mode.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "tool_placeholder",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "Prompt Template"
+        },
+        "dragging": false,
+        "id": "Prompt Template-AgWtC",
+        "measured": {
+          "height": 365,
+          "width": 320
+        },
+        "position": {
+          "x": -2329.5040316182917,
+          "y": 825.4553383600654
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "pgvector-rUzS6",
+          "node": {
+            "base_classes": [
+              "Data",
+              "DataFrame"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "PGVector Vector Store with search capabilities",
+            "display_name": "PGVector",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "pg_server_url",
+              "collection_name",
+              "ingest_data",
+              "search_query",
+              "should_cache_vector_store",
+              "embedding",
+              "number_of_results"
+            ],
+            "frozen": false,
+            "icon": "cpu",
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Search Results",
+                "group_outputs": false,
+                "method": "search_documents",
+                "name": "search_results",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "DataFrame",
+                "group_outputs": false,
+                "method": "as_dataframe",
+                "name": "dataframe",
+                "tool_mode": true,
+                "types": [
+                  "DataFrame"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langchain_community.vectorstores import PGVector\n\nfrom langflow.base.vectorstores.model import LCVectorStoreComponent, check_cached_vector_store\nfrom langflow.helpers.data import docs_to_data\nfrom langflow.io import HandleInput, IntInput, SecretStrInput, StrInput\nfrom langflow.schema.data import Data\nfrom langflow.utils.connection_string_parser import transform_connection_string\n\n\nclass PGVectorStoreComponent(LCVectorStoreComponent):\n    display_name = \"PGVector\"\n    description = \"PGVector Vector Store with search capabilities\"\n    name = \"pgvector\"\n    icon = \"cpu\"\n\n    inputs = [\n        SecretStrInput(name=\"pg_server_url\", display_name=\"PostgreSQL Server Connection String\", required=True),\n        StrInput(name=\"collection_name\", display_name=\"Table\", required=True),\n        *LCVectorStoreComponent.inputs,\n        HandleInput(name=\"embedding\", display_name=\"Embedding\", input_types=[\"Embeddings\"], required=True),\n        IntInput(\n            name=\"number_of_results\",\n            display_name=\"Number of Results\",\n            info=\"Number of results to return.\",\n            value=4,\n            advanced=True,\n        ),\n    ]\n\n    @check_cached_vector_store\n    def build_vector_store(self) -> PGVector:\n        # Convert DataFrame to Data if needed using parent's method\n        self.ingest_data = self._prepare_ingest_data()\n\n        documents = []\n        for _input in self.ingest_data or []:\n            if isinstance(_input, Data):\n                documents.append(_input.to_lc_document())\n            else:\n                documents.append(_input)\n\n        connection_string_parsed = transform_connection_string(self.pg_server_url)\n\n        if documents:\n            pgvector = PGVector.from_documents(\n                embedding=self.embedding,\n                documents=documents,\n                collection_name=self.collection_name,\n                connection_string=connection_string_parsed,\n            )\n        else:\n            pgvector = PGVector.from_existing_index(\n                embedding=self.embedding,\n                collection_name=self.collection_name,\n                connection_string=connection_string_parsed,\n            )\n\n        return pgvector\n\n    def search_documents(self) -> list[Data]:\n        vector_store = self.build_vector_store()\n\n        if self.search_query and isinstance(self.search_query, str) and self.search_query.strip():\n            docs = vector_store.similarity_search(\n                query=self.search_query,\n                k=self.number_of_results,\n            )\n\n            data = docs_to_data(docs)\n            self.status = data\n            return data\n        return []\n"
+              },
+              "collection_name": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "Table",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "collection_name",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "cases"
+              },
+              "embedding": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Embedding",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Embeddings"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "embedding",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "ingest_data": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Ingest Data",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Data",
+                  "DataFrame"
+                ],
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "ingest_data",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "number_of_results": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Number of Results",
+                "dynamic": false,
+                "info": "Number of results to return.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "number_of_results",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": 4
+              },
+              "pg_server_url": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "PostgreSQL Server Connection String",
+                "dynamic": false,
+                "info": "",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "pg_server_url",
+                "password": true,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": "postgresql+psycopg2://postgres:secret@localhost:5432/main"
+              },
+              "search_query": {
+                "_input_type": "QueryInput",
+                "advanced": false,
+                "display_name": "Search Query",
+                "dynamic": false,
+                "info": "Enter a query to run a similarity search.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "search_query",
+                "placeholder": "Enter a query...",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "query",
+                "value": ""
+              },
+              "should_cache_vector_store": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Cache Vector Store",
+                "dynamic": false,
+                "info": "If True, the vector store will be cached for the current build of the component. This is useful for components that have multiple output methods and want to share the same vector store.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "should_cache_vector_store",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "search_results",
+          "showNode": true,
+          "type": "pgvector"
+        },
+        "dragging": false,
+        "id": "pgvector-rUzS6",
+        "measured": {
+          "height": 455,
+          "width": 320
+        },
+        "position": {
+          "x": -1431.148607745506,
+          "y": 1043.2033531696263
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "EmbeddingSimilarityComponent-P30DQ",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": false,
+            "category": "embeddings",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Compute selected form of similarity between two embedding vectors.",
+            "display_name": "Embedding Similarity",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "embedding_vectors",
+              "similarity_metric"
+            ],
+            "frozen": false,
+            "icon": "equal",
+            "key": "EmbeddingSimilarityComponent",
+            "legacy": true,
+            "lf_version": "1.5.0",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Similarity Data",
+                "group_outputs": false,
+                "method": "compute_similarity",
+                "name": "similarity_data",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 0.1963360276836047,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from typing import Any\n\nimport numpy as np\n\nfrom langflow.custom.custom_component.component import Component\nfrom langflow.io import DataInput, DropdownInput, Output\nfrom langflow.schema.data import Data\n\n\nclass EmbeddingSimilarityComponent(Component):\n    display_name: str = \"Embedding Similarity\"\n    description: str = \"Compute selected form of similarity between two embedding vectors.\"\n    icon = \"equal\"\n    legacy: bool = True\n\n    inputs = [\n        DataInput(\n            name=\"embedding_vectors\",\n            display_name=\"Embedding Vectors\",\n            info=\"A list containing exactly two data objects with embedding vectors to compare.\",\n            is_list=True,\n            required=True,\n        ),\n        DropdownInput(\n            name=\"similarity_metric\",\n            display_name=\"Similarity Metric\",\n            info=\"Select the similarity metric to use.\",\n            options=[\"Cosine Similarity\", \"Euclidean Distance\", \"Manhattan Distance\"],\n            value=\"Cosine Similarity\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Similarity Data\", name=\"similarity_data\", method=\"compute_similarity\"),\n    ]\n\n    def compute_similarity(self) -> Data:\n        embedding_vectors: list[Data] = self.embedding_vectors\n\n        # Assert that the list contains exactly two Data objects\n        if len(embedding_vectors) != 2:  # noqa: PLR2004\n            msg = \"Exactly two embedding vectors are required.\"\n            raise ValueError(msg)\n\n        embedding_1 = np.array(embedding_vectors[0].data[\"embeddings\"])\n        embedding_2 = np.array(embedding_vectors[1].data[\"embeddings\"])\n\n        if embedding_1.shape != embedding_2.shape:\n            similarity_score: dict[str, Any] = {\"error\": \"Embeddings must have the same dimensions.\"}\n        else:\n            similarity_metric = self.similarity_metric\n\n            if similarity_metric == \"Cosine Similarity\":\n                score = np.dot(embedding_1, embedding_2) / (np.linalg.norm(embedding_1) * np.linalg.norm(embedding_2))\n                similarity_score = {\"cosine_similarity\": score}\n\n            elif similarity_metric == \"Euclidean Distance\":\n                score = np.linalg.norm(embedding_1 - embedding_2)\n                similarity_score = {\"euclidean_distance\": score}\n\n            elif similarity_metric == \"Manhattan Distance\":\n                score = np.sum(np.abs(embedding_1 - embedding_2))\n                similarity_score = {\"manhattan_distance\": score}\n\n        # Create a Data object to encapsulate the similarity score and additional information\n        similarity_data = Data(\n            data={\n                \"embedding_1\": embedding_vectors[0].data[\"embeddings\"],\n                \"embedding_2\": embedding_vectors[1].data[\"embeddings\"],\n                \"similarity_score\": similarity_score,\n            },\n            text_key=\"similarity_score\",\n        )\n\n        self.status = similarity_data\n        return similarity_data\n"
+              },
+              "embedding_vectors": {
+                "_input_type": "DataInput",
+                "advanced": false,
+                "display_name": "Embedding Vectors",
+                "dynamic": false,
+                "info": "A list containing exactly two data objects with embedding vectors to compare.",
+                "input_types": [
+                  "Data"
+                ],
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "embedding_vectors",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "similarity_metric": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Similarity Metric",
+                "dynamic": false,
+                "info": "Select the similarity metric to use.",
+                "name": "similarity_metric",
+                "options": [
+                  "Cosine Similarity",
+                  "Euclidean Distance",
+                  "Manhattan Distance"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "Cosine Similarity"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "EmbeddingSimilarityComponent"
+        },
+        "dragging": false,
+        "id": "EmbeddingSimilarityComponent-P30DQ",
+        "measured": {
+          "height": 263,
+          "width": 320
+        },
+        "position": {
+          "x": -938.8035969475641,
+          "y": 967.1136696826719
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "Prompt Template-7rvJ7",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {
+              "template": [
+                "submission_id"
+              ]
+            },
+            "description": "Create a prompt template with dynamic variables.",
+            "display_name": "Prompt Template",
+            "documentation": "https://docs.langflow.org/components-prompts",
+            "edited": false,
+            "error": null,
+            "field_order": [
+              "template",
+              "tool_placeholder"
+            ],
+            "frozen": false,
+            "full_path": null,
+            "icon": "braces",
+            "is_composition": null,
+            "is_input": null,
+            "is_output": null,
+            "legacy": false,
+            "lf_version": "1.5.0",
+            "metadata": {},
+            "minimized": false,
+            "name": "",
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Prompt",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "build_prompt",
+                "name": "prompt",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "priority": 0,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.prompts.api_utils import process_prompt_template\nfrom langflow.custom.custom_component.component import Component\nfrom langflow.inputs.inputs import DefaultPromptField\nfrom langflow.io import MessageTextInput, Output, PromptInput\nfrom langflow.schema.message import Message\nfrom langflow.template.utils import update_template_values\n\n\nclass PromptComponent(Component):\n    display_name: str = \"Prompt Template\"\n    description: str = \"Create a prompt template with dynamic variables.\"\n    documentation: str = \"https://docs.langflow.org/components-prompts\"\n    icon = \"braces\"\n    trace_type = \"prompt\"\n    name = \"Prompt Template\"\n    priority = 0  # Set priority to 0 to make it appear first\n\n    inputs = [\n        PromptInput(name=\"template\", display_name=\"Template\"),\n        MessageTextInput(\n            name=\"tool_placeholder\",\n            display_name=\"Tool Placeholder\",\n            tool_mode=True,\n            advanced=True,\n            info=\"A placeholder input for tool mode.\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Prompt\", name=\"prompt\", method=\"build_prompt\"),\n    ]\n\n    async def build_prompt(self) -> Message:\n        prompt = Message.from_template(**self._attributes)\n        self.status = prompt.text\n        return prompt\n\n    def _update_template(self, frontend_node: dict):\n        prompt_template = frontend_node[\"template\"][\"template\"][\"value\"]\n        custom_fields = frontend_node[\"custom_fields\"]\n        frontend_node_template = frontend_node[\"template\"]\n        _ = process_prompt_template(\n            template=prompt_template,\n            name=\"template\",\n            custom_fields=custom_fields,\n            frontend_node_template=frontend_node_template,\n        )\n        return frontend_node\n\n    async def update_frontend_node(self, new_frontend_node: dict, current_frontend_node: dict):\n        \"\"\"This function is called after the code validation is done.\"\"\"\n        frontend_node = await super().update_frontend_node(new_frontend_node, current_frontend_node)\n        template = frontend_node[\"template\"][\"template\"][\"value\"]\n        # Kept it duplicated for backwards compatibility\n        _ = process_prompt_template(\n            template=template,\n            name=\"template\",\n            custom_fields=frontend_node[\"custom_fields\"],\n            frontend_node_template=frontend_node[\"template\"],\n        )\n        # Now that template is updated, we need to grab any values that were set in the current_frontend_node\n        # and update the frontend_node with those values\n        update_template_values(new_template=frontend_node, previous_template=current_frontend_node[\"template\"])\n        return frontend_node\n\n    def _get_fallback_input(self, **kwargs):\n        return DefaultPromptField(**kwargs)\n"
+              },
+              "submission_id": {
+                "advanced": false,
+                "display_name": "submission_id",
+                "dynamic": false,
+                "field_type": "str",
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "submission_id",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "template": {
+                "_input_type": "PromptInput",
+                "advanced": false,
+                "display_name": "Template",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "prompt",
+                "value": "-- Эталонное решение\nSELECT c.best_solution\nFROM cases c\nJOIN submissions s ON s.case_id = c.case_id\nWHERE s.submission_id = '{submission_id}'::uuid;\n"
+              },
+              "tool_placeholder": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Tool Placeholder",
+                "dynamic": false,
+                "info": "A placeholder input for tool mode.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "tool_placeholder",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "Prompt Template"
+        },
+        "dragging": false,
+        "id": "Prompt Template-7rvJ7",
+        "measured": {
+          "height": 365,
+          "width": 320
+        },
+        "position": {
+          "x": -2311.586567618497,
+          "y": 1267.5445481696281
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "parser-MeApo",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Format a DataFrame or Data object into text using a template. Enable 'Stringify' to convert input into a readable string instead.",
+            "display_name": "Parser",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "mode",
+              "pattern",
+              "input_data",
+              "sep"
+            ],
+            "frozen": false,
+            "icon": "braces",
+            "legacy": false,
+            "lf_version": "1.5.0",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Parsed Text",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "parse_combined_text",
+                "name": "parsed_text",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import json\nfrom typing import Any\n\nfrom langflow.custom import Component\nfrom langflow.io import (\n    BoolInput,\n    HandleInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n    TabInput,\n)\nfrom langflow.schema import Data, DataFrame\nfrom langflow.schema.message import Message\n\n\nclass ParserComponent(Component):\n    name = \"parser\"\n    display_name = \"Parser\"\n    description = (\n        \"Format a DataFrame or Data object into text using a template. \"\n        \"Enable 'Stringify' to convert input into a readable string instead.\"\n    )\n    icon = \"braces\"\n\n    inputs = [\n        TabInput(\n            name=\"mode\",\n            display_name=\"Mode\",\n            options=[\"Parser\", \"Stringify\"],\n            value=\"Parser\",\n            info=\"Convert into raw string instead of using a template.\",\n            real_time_refresh=True,\n        ),\n        MultilineInput(\n            name=\"pattern\",\n            display_name=\"Template\",\n            info=(\n                \"Use variables within curly brackets to extract column values for DataFrames \"\n                \"or key values for Data.\"\n                \"For example: `Name: {Name}, Age: {Age}, Country: {Country}`\"\n            ),\n            value=\"Text: {text}\",  # Example default\n            dynamic=True,\n            show=True,\n            required=True,\n        ),\n        HandleInput(\n            name=\"input_data\",\n            display_name=\"Data or DataFrame\",\n            input_types=[\"DataFrame\", \"Data\"],\n            info=\"Accepts either a DataFrame or a Data object.\",\n            required=True,\n        ),\n        MessageTextInput(\n            name=\"sep\",\n            display_name=\"Separator\",\n            advanced=True,\n            value=\"\\n\",\n            info=\"String used to separate rows/items.\",\n        ),\n    ]\n\n    outputs = [\n        Output(\n            display_name=\"Parsed Text\",\n            name=\"parsed_text\",\n            info=\"Formatted text output.\",\n            method=\"parse_combined_text\",\n        ),\n    ]\n\n    def update_build_config(self, build_config, field_value, field_name=None):\n        \"\"\"Dynamically hide/show `template` and enforce requirement based on `stringify`.\"\"\"\n        if field_name == \"mode\":\n            build_config[\"pattern\"][\"show\"] = self.mode == \"Parser\"\n            build_config[\"pattern\"][\"required\"] = self.mode == \"Parser\"\n            if field_value:\n                clean_data = BoolInput(\n                    name=\"clean_data\",\n                    display_name=\"Clean Data\",\n                    info=(\n                        \"Enable to clean the data by removing empty rows and lines \"\n                        \"in each cell of the DataFrame/ Data object.\"\n                    ),\n                    value=True,\n                    advanced=True,\n                    required=False,\n                )\n                build_config[\"clean_data\"] = clean_data.to_dict()\n            else:\n                build_config.pop(\"clean_data\", None)\n\n        return build_config\n\n    def _clean_args(self):\n        \"\"\"Prepare arguments based on input type.\"\"\"\n        input_data = self.input_data\n\n        match input_data:\n            case list() if all(isinstance(item, Data) for item in input_data):\n                msg = \"List of Data objects is not supported.\"\n                raise ValueError(msg)\n            case DataFrame():\n                return input_data, None\n            case Data():\n                return None, input_data\n            case dict() if \"data\" in input_data:\n                try:\n                    if \"columns\" in input_data:  # Likely a DataFrame\n                        return DataFrame.from_dict(input_data), None\n                    # Likely a Data object\n                    return None, Data(**input_data)\n                except (TypeError, ValueError, KeyError) as e:\n                    msg = f\"Invalid structured input provided: {e!s}\"\n                    raise ValueError(msg) from e\n            case _:\n                msg = f\"Unsupported input type: {type(input_data)}. Expected DataFrame or Data.\"\n                raise ValueError(msg)\n\n    def parse_combined_text(self) -> Message:\n        \"\"\"Parse all rows/items into a single text or convert input to string if `stringify` is enabled.\"\"\"\n        # Early return for stringify option\n        if self.mode == \"Stringify\":\n            return self.convert_to_string()\n\n        df, data = self._clean_args()\n\n        lines = []\n        if df is not None:\n            for _, row in df.iterrows():\n                formatted_text = self.pattern.format(**row.to_dict())\n                lines.append(formatted_text)\n        elif data is not None:\n            formatted_text = self.pattern.format(**data.data)\n            lines.append(formatted_text)\n\n        combined_text = self.sep.join(lines)\n        self.status = combined_text\n        return Message(text=combined_text)\n\n    def _safe_convert(self, data: Any) -> str:\n        \"\"\"Safely convert input data to string.\"\"\"\n        try:\n            if isinstance(data, str):\n                return data\n            if isinstance(data, Message):\n                return data.get_text()\n            if isinstance(data, Data):\n                return json.dumps(data.data)\n            if isinstance(data, DataFrame):\n                if hasattr(self, \"clean_data\") and self.clean_data:\n                    # Remove empty rows\n                    data = data.dropna(how=\"all\")\n                    # Remove empty lines in each cell\n                    data = data.replace(r\"^\\s*$\", \"\", regex=True)\n                    # Replace multiple newlines with a single newline\n                    data = data.replace(r\"\\n+\", \"\\n\", regex=True)\n                return data.to_markdown(index=False)\n            return str(data)\n        except (ValueError, TypeError, AttributeError) as e:\n            msg = f\"Error converting data: {e!s}\"\n            raise ValueError(msg) from e\n\n    def convert_to_string(self) -> Message:\n        \"\"\"Convert input data to string with proper error handling.\"\"\"\n        result = \"\"\n        if isinstance(self.input_data, list):\n            result = \"\\n\".join([self._safe_convert(item) for item in self.input_data])\n        else:\n            result = self._safe_convert(self.input_data)\n        self.log(f\"Converted to string with length: {len(result)}\")\n\n        message = Message(text=result)\n        self.status = message\n        return message\n"
+              },
+              "input_data": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Data or DataFrame",
+                "dynamic": false,
+                "info": "Accepts either a DataFrame or a Data object.",
+                "input_types": [
+                  "DataFrame",
+                  "Data"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "input_data",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "mode": {
+                "_input_type": "TabInput",
+                "advanced": false,
+                "display_name": "Mode",
+                "dynamic": false,
+                "info": "Convert into raw string instead of using a template.",
+                "name": "mode",
+                "options": [
+                  "Parser",
+                  "Stringify"
+                ],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "tab",
+                "value": "Parser"
+              },
+              "pattern": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Template",
+                "dynamic": true,
+                "info": "Use variables within curly brackets to extract column values for DataFrames or key values for Data.For example: `Name: {Name}, Age: {Age}, Country: {Country}`",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "pattern",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "'Лучшее решение: {best_solution}, Формулировка задачи: {case_text}, Ключевые слова: {keywords},  Навыки: {skills}'"
+              },
+              "sep": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Separator",
+                "dynamic": false,
+                "info": "String used to separate rows/items.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "sep",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "\n"
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "parsed_text",
+          "showNode": true,
+          "type": "parser"
+        },
+        "dragging": false,
+        "id": "parser-MeApo",
+        "measured": {
+          "height": 359,
+          "width": 320
+        },
+        "position": {
+          "x": -538.1802946197445,
+          "y": 900.2465674081867
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "ChatOutput-EpDbu",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Display a chat message in the Playground.",
+            "display_name": "Chat Output",
+            "documentation": "https://docs.langflow.org/components-io#chat-output",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "should_store_message",
+              "sender",
+              "sender_name",
+              "session_id",
+              "data_template",
+              "background_color",
+              "chat_icon",
+              "text_color",
+              "clean_data"
+            ],
+            "frozen": true,
+            "icon": "MessagesSquare",
+            "legacy": false,
+            "lf_version": "1.5.0",
+            "metadata": {},
+            "minimized": true,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Output Message",
+                "group_outputs": false,
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "background_color": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Background Color",
+                "dynamic": false,
+                "info": "The background color of the icon.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "background_color",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "chat_icon": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Icon",
+                "dynamic": false,
+                "info": "The icon of the message.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "chat_icon",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "clean_data": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Basic Clean Data",
+                "dynamic": false,
+                "info": "Whether to clean the data",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "clean_data",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from collections.abc import Generator\nfrom typing import Any\n\nimport orjson\nfrom fastapi.encoders import jsonable_encoder\n\nfrom langflow.base.io.chat import ChatComponent\nfrom langflow.helpers.data import safe_convert\nfrom langflow.inputs.inputs import BoolInput, DropdownInput, HandleInput, MessageTextInput\nfrom langflow.schema.data import Data\nfrom langflow.schema.dataframe import DataFrame\nfrom langflow.schema.message import Message\nfrom langflow.schema.properties import Source\nfrom langflow.template.field.base import Output\nfrom langflow.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_AI,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatOutput(ChatComponent):\n    display_name = \"Chat Output\"\n    description = \"Display a chat message in the Playground.\"\n    documentation: str = \"https://docs.langflow.org/components-io#chat-output\"\n    icon = \"MessagesSquare\"\n    name = \"ChatOutput\"\n    minimized = True\n\n    inputs = [\n        HandleInput(\n            name=\"input_value\",\n            display_name=\"Inputs\",\n            info=\"Message to be passed as output.\",\n            input_types=[\"Data\", \"DataFrame\", \"Message\"],\n            required=True,\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_AI,\n            advanced=True,\n            info=\"Type of sender.\",\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_AI,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"data_template\",\n            display_name=\"Data Template\",\n            value=\"{text}\",\n            advanced=True,\n            info=\"Template to convert Data to Text. If left empty, it will be dynamically set to the Data's text key.\",\n        ),\n        MessageTextInput(\n            name=\"background_color\",\n            display_name=\"Background Color\",\n            info=\"The background color of the icon.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"chat_icon\",\n            display_name=\"Icon\",\n            info=\"The icon of the message.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"text_color\",\n            display_name=\"Text Color\",\n            info=\"The text color of the name\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"clean_data\",\n            display_name=\"Basic Clean Data\",\n            value=True,\n            info=\"Whether to clean the data\",\n            advanced=True,\n        ),\n    ]\n    outputs = [\n        Output(\n            display_name=\"Output Message\",\n            name=\"message\",\n            method=\"message_response\",\n        ),\n    ]\n\n    def _build_source(self, id_: str | None, display_name: str | None, source: str | None) -> Source:\n        source_dict = {}\n        if id_:\n            source_dict[\"id\"] = id_\n        if display_name:\n            source_dict[\"display_name\"] = display_name\n        if source:\n            # Handle case where source is a ChatOpenAI object\n            if hasattr(source, \"model_name\"):\n                source_dict[\"source\"] = source.model_name\n            elif hasattr(source, \"model\"):\n                source_dict[\"source\"] = str(source.model)\n            else:\n                source_dict[\"source\"] = str(source)\n        return Source(**source_dict)\n\n    async def message_response(self) -> Message:\n        # First convert the input to string if needed\n        text = self.convert_to_string()\n\n        # Get source properties\n        source, icon, display_name, source_id = self.get_properties_from_source_component()\n        background_color = self.background_color\n        text_color = self.text_color\n        if self.chat_icon:\n            icon = self.chat_icon\n\n        # Create or use existing Message object\n        if isinstance(self.input_value, Message):\n            message = self.input_value\n            # Update message properties\n            message.text = text\n        else:\n            message = Message(text=text)\n\n        # Set message properties\n        message.sender = self.sender\n        message.sender_name = self.sender_name\n        message.session_id = self.session_id\n        message.flow_id = self.graph.flow_id if hasattr(self, \"graph\") else None\n        message.properties.source = self._build_source(source_id, display_name, source)\n        message.properties.icon = icon\n        message.properties.background_color = background_color\n        message.properties.text_color = text_color\n\n        # Store message if needed\n        if self.session_id and self.should_store_message:\n            stored_message = await self.send_message(message)\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n\n    def _serialize_data(self, data: Data) -> str:\n        \"\"\"Serialize Data object to JSON string.\"\"\"\n        # Convert data.data to JSON-serializable format\n        serializable_data = jsonable_encoder(data.data)\n        # Serialize with orjson, enabling pretty printing with indentation\n        json_bytes = orjson.dumps(serializable_data, option=orjson.OPT_INDENT_2)\n        # Convert bytes to string and wrap in Markdown code blocks\n        return \"```json\\n\" + json_bytes.decode(\"utf-8\") + \"\\n```\"\n\n    def _validate_input(self) -> None:\n        \"\"\"Validate the input data and raise ValueError if invalid.\"\"\"\n        if self.input_value is None:\n            msg = \"Input data cannot be None\"\n            raise ValueError(msg)\n        if isinstance(self.input_value, list) and not all(\n            isinstance(item, Message | Data | DataFrame | str) for item in self.input_value\n        ):\n            invalid_types = [\n                type(item).__name__\n                for item in self.input_value\n                if not isinstance(item, Message | Data | DataFrame | str)\n            ]\n            msg = f\"Expected Data or DataFrame or Message or str, got {invalid_types}\"\n            raise TypeError(msg)\n        if not isinstance(\n            self.input_value,\n            Message | Data | DataFrame | str | list | Generator | type(None),\n        ):\n            type_name = type(self.input_value).__name__\n            msg = f\"Expected Data or DataFrame or Message or str, Generator or None, got {type_name}\"\n            raise TypeError(msg)\n\n    def convert_to_string(self) -> str | Generator[Any, None, None]:\n        \"\"\"Convert input data to string with proper error handling.\"\"\"\n        self._validate_input()\n        if isinstance(self.input_value, list):\n            return \"\\n\".join([safe_convert(item, clean_data=self.clean_data) for item in self.input_value])\n        if isinstance(self.input_value, Generator):\n            return self.input_value\n        return safe_convert(self.input_value)\n"
+              },
+              "data_template": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Data Template",
+                "dynamic": false,
+                "info": "Template to convert Data to Text. If left empty, it will be dynamically set to the Data's text key.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "data_template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "{text}"
+              },
+              "input_value": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Inputs",
+                "dynamic": false,
+                "info": "Message to be passed as output.",
+                "input_types": [
+                  "Data",
+                  "DataFrame",
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "input_value",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "sender": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Sender Type",
+                "dynamic": false,
+                "info": "Type of sender.",
+                "name": "sender",
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "Machine"
+              },
+              "sender_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Sender Name",
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "sender_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "AI"
+              },
+              "session_id": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Session ID",
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "session_id",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "should_store_message": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Store Messages",
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "should_store_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              },
+              "text_color": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Text Color",
+                "dynamic": false,
+                "info": "The text color of the name",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "text_color",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": false,
+          "type": "ChatOutput"
+        },
+        "dragging": false,
+        "id": "ChatOutput-EpDbu",
+        "measured": {
+          "height": 48,
+          "width": 192
+        },
+        "position": {
+          "x": 702.4270713954871,
+          "y": 402.9009361995786
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "HuggingFaceInferenceAPIEmbeddings-E0CPf",
+          "node": {
+            "base_classes": [
+              "Data",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Эмбеддинги через HF (e5-instruct) + косинус",
+            "display_name": "HF E5 Similarity",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "query_msg",
+              "passage_msg",
+              "api_key"
+            ],
+            "frozen": false,
+            "icon": "sparkles",
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Similarity (Message)",
+                "group_outputs": true,
+                "hidden": null,
+                "method": "build_message",
+                "name": "message",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Similarity (Data)",
+                "group_outputs": true,
+                "hidden": null,
+                "method": "build_data",
+                "name": "data",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "HF API Key",
+                "dynamic": false,
+                "info": "",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "api_key",
+                "password": true,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": "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"
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom import Component\r\nfrom langflow.io import StrInput, SecretStrInput, Output   # <- inputs/outputs отсюда\r\nfrom langflow.schema import Data, Message\r\nimport os, requests, math\r\n\r\nHF_URL = \"https://router.huggingface.co/hf-inference/models/intfloat/multilingual-e5-large-instruct/pipeline/feature-extraction\"\r\n\r\nclass HFE5Similarity(Component):\r\n    display_name = \"HF E5 Similarity\"\r\n    description = \"Эмбеддинги через HF (e5-instruct) + косинус\"\r\n    icon = \"sparkles\"\r\n    name = \"HFE5Similarity\"\r\n\r\n    # Входы как обычные строки + секрет для API-ключа\r\n    inputs = [\r\n        MessageTextInput(name=\"query_msg\",   display_name=\"Query (Message)\", required=False),\r\n        MessageTextInput(name=\"passage_msg\", display_name=\"Passage (Message)\", required=False),\r\n        SecretStrInput(name=\"api_key\", display_name=\"HF API Key\", required=False),\r\n    ]\r\n\r\n    # ДВА выхода одновременно (Message и Data)\r\n    outputs = [\r\n        Output(display_name=\"Similarity (Message)\", name=\"message\", method=\"build_message\", group_outputs=True),\r\n        Output(display_name=\"Similarity (Data)\",    name=\"data\",    method=\"build_data\",    group_outputs=True),\r\n    ]\r\n\r\n    # --- helpers ---\r\n    def _embed(self, text: str, key: str, prefix: str):\r\n        txt = (text or \"\").strip()\r\n        if not txt:\r\n            return []\r\n        r = requests.post(\r\n            HF_URL,\r\n            headers={\"Authorization\": f\"Bearer {key}\"},\r\n            json={\"inputs\": f\"{prefix}{txt}\", \"options\": {\"wait_for_model\": True}},\r\n            timeout=90,\r\n        )\r\n        r.raise_for_status()\r\n        arr = r.json()\r\n        if isinstance(arr, list) and arr and isinstance(arr[0], list):\r\n            arr = arr[0]\r\n        return [float(x) for x in arr] if isinstance(arr, list) else []\r\n\r\n    def _cos(self, a, b):\r\n        if not a or not b: \r\n            return 0.0\r\n        sa = sum(x*x for x in a); sb = sum(y*y for y in b)\r\n        if sa == 0 or sb == 0:\r\n            return 0.0\r\n        return sum(x*y for x, y in zip(a, b)) / (math.sqrt(sa) * math.sqrt(sb))\r\n\r\n    def _compute(self):\r\n        key = (self.api_key or os.getenv(\"HF_API_KEY\") or os.getenv(\"LLM_API_KEY\") or \"\").strip()\r\n        if not key:\r\n            self.status = \"Нет HF_API_KEY\"\r\n            return 0.0, 0, 0\r\n        vq = self._embed(self.query_msg,   key, \"query: \")\r\n        vp = self._embed(self.passage_msg, key, \"passage: \")\r\n        sim = self._cos(vq, vp)\r\n        if sim != sim:  # NaN\r\n            sim = 0.0\r\n        self.status = f\"ok | q_len={len(vq)} p_len={len(vp)}\"\r\n        return float(sim), len(vq), len(vp)\r\n\r\n    # Выходы — методы, связанные с Output'ами (по доке)\r\n    def build_message(self) -> Message:\r\n        sim, lq, lp = self._compute()\r\n        return Message(text=f\"Сходство: {sim:.3f} | q_len={lq} p_len={lp}\")\r\n\r\n    def build_data(self) -> Data:\r\n        sim, lq, lp = self._compute()\r\n        return Data(data={\"similarity\": sim, \"len_query\": lq, \"len_passage\": lp})"
+              },
+              "passage_msg": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Passage (Message)",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "passage_msg",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "query_msg": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Query (Message)",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "query_msg",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "HFE5Similarity"
+        },
+        "dragging": false,
+        "id": "HuggingFaceInferenceAPIEmbeddings-E0CPf",
+        "measured": {
+          "height": 411,
+          "width": 320
+        },
+        "position": {
+          "x": -1746.020033993391,
+          "y": -262.7911767445171
+        },
+        "selected": false,
+        "type": "genericNode"
+      }
+    ],
+    "viewport": {
+      "x": 3649.461638136083,
+      "y": 728.9162336499453,
+      "zoom": 1.7688312098434467
+    }
+  },
+  "description": "",
+  "endpoint_name": null,
+  "id": "68c02615-fedd-4cb4-8666-a68fccdca367",
+  "is_component": false,
+  "last_tested_version": "1.5.0",
+  "name": "flow_v2_with_features",
+  "tags": []
+}
