@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS public._cases_csv (
 TRUNCATE public._cases_csv;
 
 COPY public._cases_csv (case_id, case_text, best_solution, keywords, skills)
-FROM '/docker-entrypoint-initdb.d/data/cases.csv'
+FROM '/docker-entrypoint-initdb.d/data/synthetic_cases.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ESCAPE '"');
 
 -- переносим в нормализованную таблицу cases (external_id <- case_id из CSV)

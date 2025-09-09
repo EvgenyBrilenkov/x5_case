@@ -40,5 +40,25 @@ services:
       - db
     profiles: ["tools"]
 
+  langflow:
+    image: langflowai/langflow:1.5.1
+    depends_on:
+      db:
+        condition: service_healthy
+    user: "0:0"   # запускаем от root, чтобы точно были права на запись
+    environment:
+      LANGFLOW_DATABASE_URL: postgresql://app:app@db:5432/langflow
+      LANGFLOW_AUTO_LOGIN: "true"
+      LANGFLOW_SECRET_KEY: ${LANGFLOW_SECRET_KEY:-change-me}
+      LANGFLOW_CONFIG_DIR: /app/.langflow        # <— внутренняя папка
+      LANGFLOW_LOAD_FLOWS_PATH: /app/flows       # <— сюда монтируем ваши .json
+    volumes:
+      - ./flows:/app/flows:ro
+      - langflow_data:/app/.langflow             # <— volume на внутр. каталог
+    ports:
+      - "7860:7860"
+    # НИКАКИХ entrypoint/command с chmod больше не нужно
+
 volumes:
   pgdata:
+  langflow_data:
